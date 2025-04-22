@@ -1,0 +1,60 @@
+
+body{
+    margin: 0;
+    padding: 0;
+      font-family: sans-serif;
+      overflow: hidden;
+    }
+    
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5;
+    flex-direction: row;
+    background-color: rosybrown;
+   
+  }
+
+  .card{
+    width: 250px;
+    height:250px;
+    border:1px solid;
+    border-radius: 5px;
+    box-shadow: 4px 4px 0.5px rgba(237, 212, 229, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+  }
+
+  h1{
+    font-size: 14px;
+    text-align: center;
+  }
+
+  #message{
+    font-size: 14px;
+    text-align: center;
+  }
+
+.btn{
+width: 150px;
+height: 30px;
+border-radius: 5px;
+background-color: cadetblue;
+cursor: pointer;
+  }
+
+.heart{
+  
+  animation: pulse 2s ease  infinite alternate ;
+}
+
+@keyframes pulse{
+  0% {transform:translateY(0); opacity: 0;}
+  100% {transform:translateY(-100px); opacity: 1;}
+}
