@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master Lee's Fortune Teacup</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #f7fee7, #d1fae5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      color: #065f46;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-style: italic;
+      color: #374151;
+      min-height: 3rem;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      padding: 0.5rem 1.5rem;
+      background-color: #10b981;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #059669;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🍵 Master Lee’s Fortune Teacup</h1>
+    <p id="fortune">Click the button to receive Master Lee’s wisdom.</p>
+    <button onclick="pourTea()">Pour Tea 🍵</button>
+  </div>
+
+  <script>
+    const fortunes = [
+      "A calm soul brings powerful magic.",
+      "Even the strongest wind bows to patience.",
+      "Sometimes, tea is the only answer.",
+      "A wandering spirit still finds its home.",
+      "Trust the flow, not the force.",
+      "You must first master stillness to master power."
+    ];
+
+    function pourTea() {
+      const random = fortunes[Math.floor(Math.random() * fortunes.length)];
+      document.getElementById("fortune").textContent = random;
+    }
+  </script>
+</body>
+</html>
