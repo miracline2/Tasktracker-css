@@ -1,0 +1,127 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f9e0e9;
+    width: 100vw;
+    height: 100dvh;
+   overflow: hidden;
+}
+
+.container{
+    width: 100vw;
+    height: 100dvh;
+   position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+}
+.card{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px ;
+    width: 350px;
+    height: 320px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgb(0, 0, 0,0.5);
+    flex-direction: column;
+
+}
+
+h3{
+    text-align: center;
+
+}
+
+.btn{
+    outline: none;
+    width: 50px;
+    height: 45px;
+    row-gap: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+    
+}
+
+.btn:hover{
+  
+    transition-duration: 2s;
+    background-color: #eb90b1;
+    
+}
+.btn.selected {
+    background-color: #ffc0cb; /* cute pastel pink */
+    box-shadow: 0 0 8px #ff8fa3;
+    transform: scale(1.1);
+    border: 2px solid #ff69b4;
+  }
+  
+.buttonDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h2{
+    text-align: center;
+    font-size: 12px;
+}
+
+.form{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sub-Btn{
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 50%;
+    height: 49%;
+    background-color: #FADADD;
+    color: #5E4955;
+    border: 2px solid transparent;
+}
+
+.sub-Btn:hover {
+    border-color: #FADADD;
+    box-shadow: 0 0 10px #d88f96;
+  }
+
+  #result {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ff6ec7; /* pastel pink to start */
+    margin-top: 20px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.4s ease;
+    text-align: center;
+  }
+  
+  #result.show {
+    opacity: 1;
+    transform: scale(1);
+    animation: bounce 0.6s ease;
+    color: #ff6ec7; /* soft purple after pop-in */
+  }
+  
+  @keyframes bounce {
+    0% { transform: scale(0.8); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  

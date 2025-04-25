@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Diaries</title>
+    <link rel="stylesheet" href="./moodDiaries.css">
+</head>
+<body>
+    <div class="container"> 
+        <div class="card">
+            <h3>Mood Diary</h3>
+            <h2>What is Your Mood Today?</h2>
+            <div class="buttonDiv" >
+
+                <button class="btn" id="😄" onclick="handleEmotions(this)">😄</button>
+                <button class="btn" id="😢" onclick="handleEmotions(this)"> 😢</button>
+                <button class="btn" id="😠" onclick="handleEmotions(this)"> 😠</button>
+                <button class="btn" id="😍" onclick="handleEmotions(this)"> 😍</button>
+                <button class="btn" id="😌"onclick="handleEmotions(this)"> 😌</button>
+            </div>
+            <form action="" class="form" onsubmit="handleInput(event)">
+                <label for="">Enter Your Mood</label>
+                <input type="text"  id="mood">
+
+                <button type="submit" class="sub-Btn">Submit</button>
+            </form>
+            <p  id="result"></p>
+        </div>
+
+    </div>
+    <script src="./moodDiaries.js"></script>
+</body>
+</html>

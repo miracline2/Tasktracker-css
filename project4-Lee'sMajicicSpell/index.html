@@ -1,0 +1,174 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master Lee's Fortune Teacup</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #f7fee7, #d1fae5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      color: #065f46;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-style: italic;
+      color: #374151;
+      min-height: 3rem;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      padding: 0.5rem 1.5rem;
+      background-color: #10b981;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #059669;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🍵 Master Lee’s Fortune Teacup</h1>
+    <p id="fortune">Click the button to receive Master Lee’s wisdom.</p>
+    <button onclick="pourTea()">Pour Tea 🍵</button>
+  </div>
+
+  <script>
+    const fortunes = [
+      "A calm soul brings powerful magic.",
+      "Even the strongest wind bows to patience.",
+      "Sometimes, tea is the only answer.",
+      "A wandering spirit still finds its home.",
+      "Trust the flow, not the force.",
+      "You must first master stillness to master power."
+    ];
+
+    function pourTea() {
+      const random = fortunes[Math.floor(Math.random() * fortunes.length)];
+      document.getElementById("fortune").textContent = random;
+    }
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firework Blast</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #000;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .cracker {
+      width: 50px;
+      height: 80px;
+      background: red;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .rocket {
+      position: absolute;
+      bottom: 100px;
+      width: 10px;
+      height: 30px;
+      background: yellow;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: fly 1.5s ease-out forwards;
+    }
+
+    @keyframes fly {
+      0% { bottom: 100px; opacity: 1; }
+      80% { bottom: 70%; opacity: 1; }
+      100% { bottom: 75%; opacity: 0; }
+    }
+
+    .explosion {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #fff700, #ff6a00, transparent);
+      animation: boom 1s ease-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    @keyframes boom {
+      0% { transform: scale(0) translate(-50%, -50%); opacity: 1; }
+      80% { transform: scale(1.2) translate(-50%, -50%); opacity: 1; }
+      100% { transform: scale(1.5) translate(-50%, -50%); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="cracker" onclick="launchFirework()"></div>
+
+  <script>
+    function launchFirework() {
+      const rocket = document.createElement('div');
+      rocket.className = 'rocket';
+      document.body.appendChild(rocket);
+
+      setTimeout(() => {
+        rocket.remove();
+        const explosion = document.createElement('div');
+        explosion.className = 'explosion';
+        explosion.textContent = '💥  ';
+        document.body.appendChild(explosion);
+
+        setTimeout(() => explosion.remove(), 1000);
+      }, 1500);
+    }
+  </script>
+</body>
+</html>
