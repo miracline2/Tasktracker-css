@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Weather Vibe App</title>
+    <link rel="stylesheet" href="./weather.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Click Here on weather Emoji</h1>
+        <div class="buttonDiv" >
+
+            <button class="btn" id="🌞" onclick="handleWeather(this)">🌞</button>
+            <button class="btn" id="☁️" onclick="handleWeather(this)"> ☁️</button>
+            <button class="btn" id="🌧️" onclick="handleWeather(this)">🌧️</button>
+            <button class="btn" id="⚡" onclick="handleWeather(this)">⚡</button>
+            <button class="btn" id="❄️"onclick="handleWeather(this)">❄️</button>
+        </div>
+        <p id="result"></p>
+    </div>
+
+    <script src="./weather.js"></script>
+    
+</body>
+</html>
