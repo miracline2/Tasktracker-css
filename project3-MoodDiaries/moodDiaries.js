@@ -1,15 +1,33 @@
-const card = document.getElementsByClassName('card')
-const inputElement = document.createElement('input')
-card.append(inputElement)
+
+var emotion;
+var moodValue;
 
 
 function handleEmotions(button) {
-    const emotion = button.id;
-    console.log("You clicked:", emotion);
-    // You can add logic like:
-    if (emotion === 'happy') {
-    
-      
-     }
+
+     emotion = button.id;
+     const allButtons = document.querySelectorAll('.btn');
+     allButtons.forEach(btn => btn.classList.remove('selected'));
+     button.classList.add('selected');
+  
+
   }
   
+  function handleInput(e){
+   
+    e.preventDefault();
+    moodValue = document.getElementById('mood').value;
+
+ 
+  result.innerHTML = `${emotion} - ${moodValue}`;
+
+  void result.offsetWidth;
+
+  result.classList.add('show');
+
+  document.getElementById('mood').value = '';
+  const allButtons = document.querySelectorAll('.btn');
+  allButtons.forEach(btn => btn.classList.remove('selected'));
+  emotion = '';
+  
+  }

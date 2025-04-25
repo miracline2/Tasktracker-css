@@ -13,13 +13,19 @@
             <h2>What is Your Mood Today?</h2>
             <div class="buttonDiv" >
 
-                <button id="happy" onclick="handleEmotions(happy)">😄</button>
-                <button id="sad" onclick="handleEmotions(sad)"> 😢</button>
-                <button id="angry" onclick="handleEmotions(angry)"> 😠</button>
-                <button id="love" onclick="handleEmotions(love)"> 😍</button>
-                <button id="satisfied"onclick="handleEmotions(satisfied)"> 😌</button>
+                <button class="btn" id="😄" onclick="handleEmotions(this)">😄</button>
+                <button class="btn" id="😢" onclick="handleEmotions(this)"> 😢</button>
+                <button class="btn" id="😠" onclick="handleEmotions(this)"> 😠</button>
+                <button class="btn" id="😍" onclick="handleEmotions(this)"> 😍</button>
+                <button class="btn" id="😌"onclick="handleEmotions(this)"> 😌</button>
             </div>
-            
+            <form action="" class="form" onsubmit="handleInput(event)">
+                <label for="">Enter Your Mood</label>
+                <input type="text"  id="mood">
+
+                <button type="submit" class="sub-Btn">Submit</button>
+            </form>
+            <p  id="result"></p>
         </div>
 
     </div>
