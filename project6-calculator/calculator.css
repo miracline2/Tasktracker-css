@@ -1,0 +1,38 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    font-family: serif;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.numbers {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    gap: 10px; /* gap between buttons */
+}
+
+.btn {
+    cursor: pointer;
+    width: 100px;
+    height: 80px;
+    font-size: 24px;
+}
+
+.operation{
+    margin-top: 10px;
+}
+
+button{
+    cursor: pointer;
+}
+
+#result{
+    color: azure;
+}
